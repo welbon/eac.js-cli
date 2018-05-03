@@ -4,7 +4,7 @@ RUN apk update && apk upgrade && \
     apk add --no-cache bash git openssh python build-base
 
 WORKDIR /app
-RUN git clone https://github.com/ethereum-alarm-clock/eac.js-cli.git /app
+RUN git clone -b 1.0.0-beta.3 https://github.com/ethereum-alarm-clock/eac.js-cli.git /app
 COPY wallet--79a92e6fe6baecf1e0a895d2d960e2321331697c /app
 
 RUN cd /app
